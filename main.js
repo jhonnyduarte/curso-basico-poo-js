@@ -38,3 +38,33 @@ const juanita = new Student(
 );
 
 juanita.aprobarCurso('Ingles c1');
+
+//  CLASES
+
+class Student2 {
+    constructor({
+        name,
+        age,
+        email,
+        cursosAprobados = []
+    }) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.cursosAprobados = cursosAprobados;
+    }
+
+    aprobarCurso(nuevoCurso) {
+        this.cursosAprobados.push(nuevoCurso);
+    }
+}
+
+const miguelito = new Student2({
+    email: 'miguelito@platzi.com',
+    name: 'Miguel',
+    age: 45,
+}
+   
+)
+
+miguelito.aprobarCurso('Curso de Ingles B1');
